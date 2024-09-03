@@ -1,0 +1,23 @@
+public class Intro_Cube {
+
+	public static void main(String[] args) {
+		/* Calculate the surface area and volume of a cube 
+		 * with a side of 3.
+	 	 * 
+	   * Var Key
+		 * s means side
+		 * sura means surface area
+		 * v means volume
+		 */
+		int s = 3;
+		//Find the surface area of the cube
+		int sura = 6*s;
+		System.out.print("This is the surface are of the Cube " + sura + ".");
+		//Find the volume of the cube
+		int v = s*s*s;
+		System.out.print("\nThis is the volume of the Cube " + v + ".");
+		//Volume as a double
+		System.out.print("\nThis is the volume of the Cube as a double " + (double) v +".");
+	}
+
+}
