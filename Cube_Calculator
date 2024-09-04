@@ -15,8 +15,8 @@ public class Intro_Cube {
 		//Find the volume of the cube
 		double v = s*s*s;	
 		//Print volume and surface area as ints
-		System.out.print("\nThis is the volume of the Cube as an int " + (int)v + ".");
-		System.out.print("This is the surface are of the Cube as an int " + (int)sura + ".");
+		System.out.print("This is the volume of the Cube as an int " + (int)v + ".");
+		System.out.print("\nThis is the surface are of the Cube as an int " + (int)sura + ".");
 	}
 
 }
