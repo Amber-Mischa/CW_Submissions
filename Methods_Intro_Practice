@@ -6,8 +6,8 @@ public class Methods_Intro_Practice {
 		stateName();
 		stateHairStyle();
 		stateFavoriteFood();
-		printCircleStats(3.0);
-		printMathStuffs(5,7);
+		printCircleStats(36.15);
+		printMathStuffs(24,18);
 	}
 
 	/** 
@@ -105,11 +105,11 @@ public class Methods_Intro_Practice {
 		int modu = numOne%numTwo;
 		
 		//calls the answers
-		System.out.println("\nThe sum using " + numOne + " and "+numTwo +" is " +sum+ ".");
-		System.out.println("The difference using " + numOne + " and "+numTwo +" is " +diff+ ".");
-		System.out.println("The product using " + numOne + " and "+numTwo +" is " +pro+ ".");
-		System.out.println("The quotient using " + numOne + " and "+numTwo +" is " +quot+ ".");
-		System.out.println("The remainder using " + numOne + " and "+numTwo +" is " +modu+ ".");
+		System.out.println("\nThe sum of " + numOne + "+"+numTwo +" is " +sum+ ".");
+		System.out.println("The difference of " + numOne + "-"+numTwo +" is " +diff+ ".");
+		System.out.println("The product of " + numOne + "*"+numTwo +" is " +pro+ ".");
+		System.out.println("The quotient of " + numOne + "/"+numTwo +" is " +quot+ ".");
+		System.out.println("The remainder of " + numOne + "%"+numTwo +" is " +modu+ ".");
 	}
 
 }
