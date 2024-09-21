@@ -7,7 +7,7 @@ public class NonVoid_Methods_Practice {
 		System.out.println(stateHairStyle());
 		System.out.println(stateFavoriteFood());
 		//Task 2
-		printCircleStats();
+		System.out.println(printCircleStats());
 		//Task 3
 		int numOne = 3;
 		int numTwo = 5;
@@ -21,11 +21,10 @@ public class NonVoid_Methods_Practice {
 	}
 	//task 1
 	/** 
-	 * @return my name when called 
+	 * @return my full name when called 
 	 */
 	public static String stateName() 
 	{
-		//my full name
 		return "My name is Amber Mischa Flores Kanthack.";
 	}
 	
@@ -60,7 +59,7 @@ public class NonVoid_Methods_Practice {
 	
 	public static String stateFavoriteFood() 
 	{
-		return"My favorite food is currently fried rice! This changes often.";
+		return "My favorite food is currently fried rice! This changes often.";
 	}
 	
 	//task 2
@@ -95,8 +94,7 @@ public class NonVoid_Methods_Practice {
 	public static double getArea(double r) 
 	{
 		final double pi = 3.14;
-		double area = pi*(r*r);	
-		return area;
+		return pi*(r*r);
 	}
 	
 	/**
@@ -104,12 +102,7 @@ public class NonVoid_Methods_Practice {
 	 */
 	public static String printCircleStats() {
 		double r=2;
-		
-		System.out.println("\nThe radius of the circle is " + r);
-		System.out.println("The diameter of the circle is " + getDiameter(r));
-		System.out.println("The circumference of the circle is "+ getCircumference(r));
-		System.out.println("The area of the circle is " + getArea(r));
-		return null;
+		return "\nThe radius of the circle is " + r +"\nThe diameter of the circle is " + getDiameter(r) +"\nThe circumference of the circle is "+ getCircumference(r)+ "\nThe area of the circle is " + getArea(r);
 	}
 	//task 3
 	/* Var key
@@ -154,8 +147,8 @@ public class NonVoid_Methods_Practice {
 	{
 		return numOne/numTwo;
 	}
-	
-	
+
+
 	/**
 	 * finds out remainder of two ints
 	 */
@@ -163,5 +156,5 @@ public class NonVoid_Methods_Practice {
 	{
 		return numOne%numTwo;
 	}
-	
+
 }
