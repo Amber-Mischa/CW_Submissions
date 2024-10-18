@@ -57,9 +57,10 @@ public class StringIntro {
 	 */
 	public static void printFirstAndLastThree(String input){
 		//variables used to find the last three characters
-    int thirdToLastChar = input.length()-3;
+		int thirdToLastChar = input.length()-3;
 		int lastChar = input.length();
-    //prints out last three characters and the first three
+		
+		//prints out last three characters and the first three
 		System.out.print("The first three characters are " + input.substring(0, 3) + " and the last three characters are " + input.substring(thirdToLastChar,lastChar));
 	}
 }
