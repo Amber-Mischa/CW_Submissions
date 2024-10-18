@@ -9,16 +9,12 @@ public class StringIntro {
 
 	public static void main(String[] args)
 	{
-		/*
-		 * Sets up the scanner and the myInput variable for later methods to use.
-		 */
+		//Sets up the scanner and the myInput variable for later methods to use.
 		Scanner myReader = new Scanner(System.in);
 		String myInput = new String(myReader.next());
 		myReader.close();
 		
-		/*
-		 * Calls all the methods using myInput as the param to execute all the tasks.
-		 */
+		//Calls all the methods using myInput as the param to execute all the tasks.
 		printSecondAndLastLetter(myInput);
 		System.out.println(findTheE(myInput));
 		System.out.println(getLength(myInput));
