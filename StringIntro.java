@@ -9,15 +9,19 @@ public class StringIntro {
 
 	public static void main(String[] args)
 	{
-		//Sets up the scanner and the myInput variable for later methods to use.
+		/*
+		 * Sets up the scanner and the myInput variable for later methods to use.
+		 */
 		Scanner myReader = new Scanner(System.in);
 		String myInput = new String(myReader.next());
 		myReader.close();
 		
-		//Calls all the methods using myInput as the param to execute all the tasks.
+		/*
+		 * Calls all the methods using myInput as the param to execute all the tasks.
+		 */
 		printSecondAndLastLetter(myInput);
-		System.out.println(findTheE(myInput));
-		System.out.println(getLength(myInput));
+		System.out.println("The index of e is " + findTheE(myInput));
+		System.out.println("The length of " +myInput + " is " + getLength(myInput));
 		printFirstAndLastThree(myInput);
 
 	}
@@ -37,17 +41,17 @@ public class StringIntro {
 	 * @return the index of the e if there is one.
 	 * If there is not an e in the word inputed the method will return -1
 	 */
-	public static String findTheE(String input) {
-		return "The index of e is " + input.indexOf("e");
+	public static int findTheE(String input) {
+		return input.indexOf("e");
 	}
 	
 	
 	/**
 	 * @return the length of the inputed word
 	 */
-	public static String getLength(String input)
+	public static int getLength(String input)
 	{
-		return "The length of " +input + " is " + input.length();
+		return input.length();
 	}
 	
 	
@@ -56,11 +60,8 @@ public class StringIntro {
 	 * and the last three characters of the inputed word.
 	 */
 	public static void printFirstAndLastThree(String input){
-		//variables used to find the last three characters
 		int thirdToLastChar = input.length()-3;
 		int lastChar = input.length();
-		
-		//prints out last three characters and the first three
 		System.out.print("The first three characters are " + input.substring(0, 3) + " and the last three characters are " + input.substring(thirdToLastChar,lastChar));
 	}
 }
