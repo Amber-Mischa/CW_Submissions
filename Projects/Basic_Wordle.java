@@ -2,8 +2,9 @@
  * This is a basic version of the known Wordle game.
  * By basic I mean there are parameters that the player must 
  * obey when playing or they have to guess again.
- * The creator chooses the word being used for the game. But it 
- * has to also fit in the parameters given to the player.
+ * The computer chooses the word being used from a list for 
+ * the game. But it has to also fit in the parameters given 
+ * to the player.
  * Player can guess as many times as they want to. There are 
  * slight bugs in the code that allows to guess more than once 
  * without running the code again.
@@ -17,8 +18,21 @@ public class Basic_Wordle {
 	public static void main(String[] args) {
 		
 		//determine what the answer should be, coder gets to decide this LOWERCASE ONLY
-		String answer = new String ("facet");
-		
+		String[] randomAnswer = {"facet", "cloud", "smile", "white", "cream", "clots", "shock", "wipes", "fazes", "boxes", 
+				"jumbo", "quack", "epoxy", "hazel", "waltz", "chunk", "abets", "crane", "acids", "amids", 
+				"angel", "bacon", "badly", "based", "bread", "beast", "beans", "bento", "biled", "biker", 
+				"bigot", "bloke", "birds", "sixty", "tired", "clamp", "budge", "elbow", "liner", "abort", 
+				"earth", "blown", "grasp", "horse", "debit", "vouch", "slack", "thorn", "close", "haunt", 
+				"maori", "glide", "slope", "rough", "twink", "ovary", "prove", "quest", "vital", "dimly",
+				"stock", "piled", "brief", "groin", "cubit", "skirt", "chirp", "glade", "value", "deign", 
+				"viled", "tonic", "ampul", "thump", "untie", "rival", "glyph", "train", "suite", "trace",
+				"kudos", "swamp", "shade", "fight", "strip", "anime", "leash", "brace", "audit", "model",
+				"adorn", "hydra", "voice", "phase", "clang", "shear", "drive", "noble", "first", "wheat", 
+				"ivory", "under", "outer", "after", "swing", "sharp", "fable", "crate", "yeast", "women", 
+				"saber", "slang", "begin", "plumb", "dowry", "scrap", "owner", "crash", "vines", "price",
+				"valor", "fancy", "snowy", "crane", "valet", "novel", "splay", "brand", "spade", "groan",
+				"duchy", "empty", "human", "crisp", "sling", "folks", "other", "shark", "fetch", "tunic"};
+		String answer = new String(randomAnswer[(int)(Math.random()*140)]);
 		System.out.println("Welcome to Wordle! Guess the 5 letter unknown word. There is no repeat letters in the word.");
 		System.out.println("After guessing if the letter is in the right place then it will print the letter.");
 		System.out.print("If the letter is correct but in the wrong place then it will print \"?\".");
@@ -51,7 +65,7 @@ public class Basic_Wordle {
 			//if invalid print error message
 			if(validCheck == -1)
 			{
-				System.out.println("Not a valid answer, please try again with no double letters.");
+				System.out.println("Not a valid answer.");
 				playAgain(playerGuess, answer);
 
 			}
@@ -66,7 +80,11 @@ public class Basic_Wordle {
 				//plays the game again
 				if(!playerGuess.equals(answer))
 				{
-					playAgain(playerGuess, answer);
+					if(playerGuess.length() == 5)
+					{
+						playAgain(playerGuess, answer);
+					}
+					
 				}
 				else
 				{
@@ -283,7 +301,7 @@ public class Basic_Wordle {
 				int validCheck = doublesCheck(playerGuess);
 				if(validCheck == -1)
 				{
-					System.out.println("Not a valid answer, please try again with no double letters.");
+					System.out.println("Not a valid answer.");
 					playAgain(playerGuess, answer);
 
 				}
@@ -306,39 +324,43 @@ public class Basic_Wordle {
 		}
 		else
 		{
-			System.out.print("Not a valid answer, please try again with a 5 letter word.");
+			//prints out if the answer doesn't fit the given parameters.
+			System.out.print("Not a valid answer.");
 		}
 	}
 	
 	/**
 	 * This method is used to check if the player uses a character more than once.
-	 * @param index
-	 * @param playerGuess
+	 *
 	 */
 	public static int doublesCheck(String playerGuess) {
-		if(playerGuess.charAt(0) == playerGuess.charAt(1) || playerGuess.charAt(0) == playerGuess.charAt(2) || playerGuess.charAt(0) == playerGuess.charAt(3) || playerGuess.charAt(0) == playerGuess.charAt(4))
+		if (playerGuess.length() == 5)
 		{
-			return -1;
+			if(playerGuess.charAt(0) == playerGuess.charAt(1) || playerGuess.charAt(0) == playerGuess.charAt(2) || playerGuess.charAt(0) == playerGuess.charAt(3) || playerGuess.charAt(0) == playerGuess.charAt(4))
+			{
+				return-1;
+			}
+			else if (playerGuess.charAt(1) == playerGuess.charAt(0) || playerGuess.charAt(1) == playerGuess.charAt(2) || playerGuess.charAt(1) == playerGuess.charAt(3) || playerGuess.charAt(1) == playerGuess.charAt(4))
+			{
+				return -1;
+			}
+			else if (playerGuess.charAt(2) == playerGuess.charAt(0) || playerGuess.charAt(2) == playerGuess.charAt(1) || playerGuess.charAt(2) == playerGuess.charAt(3) || playerGuess.charAt(2) == playerGuess.charAt(4))
+			{
+				return  -1;
+			}
+			else if (playerGuess.charAt(3) == playerGuess.charAt(0) || playerGuess.charAt(3) == playerGuess.charAt(1) || playerGuess.charAt(3) == playerGuess.charAt(2) || playerGuess.charAt(3) == playerGuess.charAt(4))
+			{
+				return  -1;
+			}
+			else if (playerGuess.charAt(4) == playerGuess.charAt(0) || playerGuess.charAt(4) == playerGuess.charAt(1) || playerGuess.charAt(4) == playerGuess.charAt(2) || playerGuess.charAt(4) == playerGuess.charAt(3))
+			{
+				return-1;
+			}
+			else
+			{
+				return  1;
+			}
 		}
-		else if (playerGuess.charAt(1) == playerGuess.charAt(0) || playerGuess.charAt(1) == playerGuess.charAt(2) || playerGuess.charAt(1) == playerGuess.charAt(3) || playerGuess.charAt(1) == playerGuess.charAt(4))
-		{
-			return -1;
-		}
-		else if (playerGuess.charAt(2) == playerGuess.charAt(0) || playerGuess.charAt(2) == playerGuess.charAt(1) || playerGuess.charAt(2) == playerGuess.charAt(3) || playerGuess.charAt(2) == playerGuess.charAt(4))
-		{
-			return -1;
-		}
-		else if (playerGuess.charAt(3) == playerGuess.charAt(0) || playerGuess.charAt(3) == playerGuess.charAt(1) || playerGuess.charAt(3) == playerGuess.charAt(2) || playerGuess.charAt(3) == playerGuess.charAt(4))
-		{
-			return -1;
-		}
-		else if (playerGuess.charAt(4) == playerGuess.charAt(0) || playerGuess.charAt(4) == playerGuess.charAt(1) || playerGuess.charAt(4) == playerGuess.charAt(2) || playerGuess.charAt(4) == playerGuess.charAt(3))
-		{
-			return -1;
-		}
-		else
-		{
-			return 1;
-		}
+		return -1;
 	}
 }
