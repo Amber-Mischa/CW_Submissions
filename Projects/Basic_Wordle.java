@@ -36,7 +36,7 @@ public class Basic_Wordle {
 		System.out.println("Welcome to Wordle! Guess the 5 letter unknown word. There is no repeat letters in the word.");
 		System.out.println("After guessing if the letter is in the right place then it will print the letter.");
 		System.out.print("If the letter is correct but in the wrong place then it will print \"?\".");
-		System.out.println(" If the letter is wrog then it will print \"X\".");
+		System.out.println(" If the letter is wrong then it will print \"X\".");
 
 
 
