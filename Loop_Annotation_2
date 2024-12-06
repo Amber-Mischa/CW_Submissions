@@ -1,0 +1,56 @@
+	/**
+	 * This method is not static. What does this mean about how the method works? After code tracing, also answer
+   * the following question: what does this method do?
+   *
+	 * This method rely on something else so it is not static. 
+   * The method checks if the char at a certain index 'i', is the same as 
+   * the given char passed in the parameters 'c'
+	 */
+	public int doesSomething(char c)
+	{
+		/*
+		 * This line below works even though str was not instantiated in the method.
+		 * What conclusion can you draw from this fact?
+		 * 
+		 * str was instatiated somewhere else in the Class. 
+		 * It could be a class attribute.
+		 * 
+		 * */
+
+		int l = str.length();
+		
+		/*
+		 * Why might executing the loop below result in a syntax error?
+		 * 
+		 * The loop will result in a syntax error because the the loop will
+		 * try check an index past the length of the string. Since the index 
+     * of the first char is 0 and when counting length the first letter 
+     * is counted as 1.
+     * 
+		 */
+		for (int i = 0; i <= l; i++)
+		{
+			
+			/*
+			 * What is this line checking for? What does it return if it is true?
+       *
+			 * This line checks if the character at a given increment 'i' in the string 
+       * is the same as the inputed character in the parameters
+			 */
+			if (str.charAt(i) == c)
+			{
+				return i;
+			}
+			
+		}
+		/*
+		 * What is the purpose of this line below? 
+		 * Think about what needs to happen for it to be reached. 
+		 * 
+		 * This line is here becuase if the String 'str' doesn't have 
+     * the char 'c' in the String then it will need to return something 
+     * to tell that there isn't that letter in the String.
+		 */
+		return -1;
+		
+	}
