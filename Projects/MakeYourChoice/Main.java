@@ -369,7 +369,7 @@ public class Main {
 					"""
 					+ textEkas + Ekas.getNpcNameAndEmotion() +": It's the heroes! We found them! \n"
 					+ textBartholomw + Bartholowmew.getNpcNameAndEmotion() +": They're clearly dead though. I think we have to destroy the crystal to finish the quest. \n"
-					+ textPhosrea + Phosrea.getNpcNameAndEmotion()+ ": Do you want to break the crystal or return to the Kingdom?" + textReset + "(break/return)\n");
+					+ textPhosrea + Phosrea.getNpcNameAndEmotion()+ ": Do you want to break the crystal or return to the Kingdom?" + textReset + "(break/return)");
 			//goes into the next choice.
 			stoneChoiceOne(Phosrea, Bartholowmew, Ekas, Aster, Haru, Cassia, Ormr);
 		}
@@ -619,8 +619,7 @@ public class Main {
 					+ "Good luck with your quest User. \n" +textReset+ """
 							You open your eyes and see your party. You tell your party about the information you gained from Aelar. The group of kids 
 							lie motionless on the ground. You look sadly at the deceased kids. There is nothing you can do for them. The rest of your 
-							party ask you what the party is going to do, go back to the right hallway or head back to the kingdom. (hallway/Kingdom)
-									""");
+							party ask you what the party is going to do, go back to the right hallway or head back to the kingdom. (hallway/Kingdom)""");
 			//goes into the next choice.
 			majorQuestChoiceThree(Phosrea, Bartholowmew, Ekas, Aster, Haru, Cassia, Ormr);
 		}
@@ -797,7 +796,7 @@ public class Main {
 					something, every decoration is pitch black. You've only seen it like this during the festival for the Archaic Heroes. You can't have been gone that 
 					long right? You look around the kingdom and see a crowd gathered in the square. You head over and see a statue of you and your party. It hits you 
 					then. You are dead. Nobody can see you, interact with you, or hear you. Khemet is mourning your party's death, not the Heroes' deaths.""" );
-			System.out.println(textAelar+"Aelar(grief?): Ah...I'm sorry. I've never felt this way. Why are you so different? Nevermind would you like to try again?" + textReset);
+			System.out.println(textAelar+"Aelar(grief?): Ah...I'm sorry. I've never felt this way. Why are you so different? Nevermind would you like to try again?" + textReset + "(yes/no)");
 			//Ask if you want to retry after failing.
 			badEndingAfterAelar(Phosrea, Bartholowmew, Ekas, Aster, Haru, Cassia, Ormr);
 		}
@@ -853,7 +852,7 @@ public class Main {
 					realms. You dearly wish that you could have changed this. That you could have done more. You could have helped the heroes. 
 					"""
 					+textAelar + "Aelar: " + Characters.getPlayerName() + ", would you like to try change this world's fate again?" + textReset+ "(yes/no)");
-			convoChoice(Phosrea, Bartholowmew, Ekas, Aster, Haru, Cassia, Ormr);
+			badEndingAfterAelar(Phosrea, Bartholowmew, Ekas, Aster, Haru, Cassia, Ormr);
 			
 		}
 	}
