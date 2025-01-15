@@ -1,4 +1,8 @@
-
+/**
+ * This class is for the Arrays Intro assignment.
+ * it completes all the tasks
+ * @author amberkanthack
+ */
 public class Arrays_Intro {
 
 	public static void main(String[] args) {
