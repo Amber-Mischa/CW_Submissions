@@ -13,7 +13,7 @@ public class Searching_Arrays {
 		//calls all the methods and prints out what they return
 		System.out.println(checkFor4(arr));
 		System.out.println(countFor4(arr));
-		System.out.println(countForFour4(arr));
+		System.out.println(checkForFour4(arr));
 		
 	}
 	
@@ -80,7 +80,7 @@ public class Searching_Arrays {
 		return count;
 	}
 	
-	public static boolean countForFour4(int[] arr)
+	public static boolean checkForFour4(int[] arr)
 	{
 		//copies the original array
 		int[] copyArr = arr;
