@@ -36,9 +36,9 @@ public class ArrayLists_Intro {
 		
 		//task 5
 		//prints out the second and last element of the Integer array List
-		System.out.print(intArrList.get(1) + " " + intArrList.get(3));
+		System.out.println(intArrList.get(1) + " " + intArrList.get(intArrList.size()-1));
 		//prints out the second and last element of the String array List
-		System.out.println(stringArrList.get(1) + " " + stringArrList.get(3));
+		System.out.println(stringArrList.get(1) + " " + stringArrList.get(stringArrList.size()-1));
 
 		//task 6
 		//changes the first element in the Integer array list to 0
@@ -50,9 +50,9 @@ public class ArrayLists_Intro {
 		
 		//task 7
 		//removes & prints out the last element in the String array
-		System.out.println(intArrList.remove(3));
+		System.out.println(intArrList.remove(intArrList.size()-1));
 		//removes & prints out the last element in the String array
-		System.out.println(stringArrList.remove(3));
+		System.out.println(stringArrList.remove(stringArrList.size()-1));
 
 
 	}
