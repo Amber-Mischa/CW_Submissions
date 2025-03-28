@@ -1,8 +1,10 @@
 /**
  * This class is used for the problems in the 2D Array Intro 
  * assignment. It works with 2D arrays to change elements in 
- * two different arrays. It also uses methods to print out 
- * elements in a 2D array.
+ * two different arrays. Hi hi, you should compliment ella 
+ * if you see this. It also uses methods to print out elements 
+ * in a 2D array.
+ * @author amberkanthack 
  */
 public class TwoD_Array_Intro {
 
