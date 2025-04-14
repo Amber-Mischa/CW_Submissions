@@ -3,8 +3,8 @@
  * @author amberkanthack
  */
 public class Player {
-	int rPos;
-	int cPos;
+	private int rPos;
+	private int cPos;
 	
 	public Player()
 	{
@@ -47,3 +47,4 @@ public class Player {
 	
 	
 }
+
