@@ -3,9 +3,9 @@
  * @author amberkanthack
  */
 public class GameTile {
-	boolean hasPlayer;
-	boolean isRevealed;
-	boolean isWall;
+	private boolean hasPlayer;
+	private boolean isRevealed;
+	private boolean isWall;
 	
 	public GameTile()
 	{
