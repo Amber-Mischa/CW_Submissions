@@ -78,17 +78,17 @@ public class Main {
 		if(choice.equalsIgnoreCase("down"))
 		{
 			//checks if it is inbounds
-			if(player.rPos<4)
+			if(player.getRowPos()<4)
 			{
 				//checks if there is a wall
-				if(maze[player.rPos+1][player.cPos].isWall == false)
+				if(maze[player.getRowPos()+1][player.getColPos()].getIsWall() == false)
 				{
 					//moves the player down
-					maze[player.rPos][player.cPos].setHasPlayer(false);
-					maze[player.rPos][player.cPos].setRevealed(true);
-					player.setR(player.rPos+1);
-					maze[player.rPos][player.cPos].setHasPlayer(true);
-					maze[player.rPos][player.cPos].setRevealed(true);
+					maze[player.getRowPos()][player.getColPos()].setHasPlayer(false);
+					maze[player.getRowPos()][player.getColPos()].setRevealed(true);
+					player.setR(player.getRowPos()+1);
+					maze[player.getRowPos()][player.getColPos()].setHasPlayer(true);
+					maze[player.getRowPos()][player.getColPos()].setRevealed(true);
 
 					//checks if the player won
 					if(checkWin() == true)
@@ -109,7 +109,7 @@ public class Main {
 					
 					System.out.println("There is a wall, cannot move down. Please pick another position.");
 					//reveals the wall
-					maze[player.rPos+1][player.cPos].setRevealed(true);
+					maze[player.getRowPos()+1][player.getColPos()].setRevealed(true);
 					//makes them choose again
 					movePlayer();
 				}
@@ -124,16 +124,16 @@ public class Main {
 		else if(choice.equalsIgnoreCase("up"))
 		{
 			//checks if it is inbounds
-			if(player.rPos>0)
+			if(player.getRowPos()>0)
 			{
 				//checks if there is a wall first
-				if(!maze[player.rPos-1][player.cPos].isWall)
+				if(!maze[player.getRowPos()-1][player.getColPos()].getIsWall())
 				{
 					//moves the player up
-					maze[player.rPos][player.cPos].setHasPlayer(false);
-					player.setR(player.rPos-1);
-					maze[player.rPos][player.cPos].setHasPlayer(true);
-					maze[player.rPos][player.cPos].setRevealed(true);
+					maze[player.getRowPos()][player.getColPos()].setHasPlayer(false);
+					player.setR(player.getRowPos()-1);
+					maze[player.getRowPos()][player.getColPos()].setHasPlayer(true);
+					maze[player.getRowPos()][player.getColPos()].setRevealed(true);
 				
 					//checks if the player finished the maze
 					if(checkWin() == true)
@@ -153,7 +153,7 @@ public class Main {
 				{
 					System.out.println("There is a wall, cannot move down. Please pick another position.");
 					//reveals the wall
-					maze[player.rPos-1][player.cPos].setRevealed(true);
+					maze[player.getRowPos()-1][player.getColPos()].setRevealed(true);
 					//makes them choose again
 					movePlayer();
 				}
@@ -170,16 +170,16 @@ public class Main {
 		else if(choice.equalsIgnoreCase("left"))
 		{
 			//checks if it is inbounds
-			if(player.cPos>0)
+			if(player.getColPos()>0)
 			{
 				//checks if there is a wall
-				if(maze[player.rPos][player.cPos-1].isWall == false)
+				if(maze[player.getRowPos()][player.getColPos()-1].getIsWall() == false)
 				{
 					//moves the player left
-					maze[player.rPos][player.cPos].setHasPlayer(false);
-					player.setC(player.cPos-1);
-					maze[player.rPos][player.cPos].setHasPlayer(true);
-					maze[player.rPos][player.cPos].setRevealed(true);
+					maze[player.getRowPos()][player.getColPos()].setHasPlayer(false);
+					player.setC(player.getColPos()-1);
+					maze[player.getRowPos()][player.getColPos()].setHasPlayer(true);
+					maze[player.getRowPos()][player.getColPos()].setRevealed(true);
 					//checks if the player finished the maze
 					if(checkWin() == true)
 					{
@@ -198,7 +198,7 @@ public class Main {
 				{
 					System.out.println("There is a wall, cannot move down. Please pick another position.");
 					//reveals the wall
-					maze[player.rPos][player.cPos-1].setRevealed(true);
+					maze[player.getRowPos()][player.getColPos()-1].setRevealed(true);
 					//next move
 					movePlayer();
 				}
@@ -216,16 +216,16 @@ public class Main {
 		else if(choice.equalsIgnoreCase("right"))
 		{
 			//checks if it is inbounds
-			if(player.cPos<4)
+			if(player.getColPos()<4)
 			{
 				//checks if there is a wall
-				if(maze[player.rPos][player.cPos+1].isWall == false)
+				if(maze[player.getRowPos()][player.getColPos()+1].getIsWall() == false)
 				{
 					//moves the player right
-					maze[player.rPos][player.cPos].setHasPlayer(false);
-					player.setC(player.cPos+1);
-					maze[player.rPos][player.cPos].setHasPlayer(true);
-					maze[player.rPos][player.cPos].setRevealed(true);
+					maze[player.getRowPos()][player.getColPos()].setHasPlayer(false);
+					player.setC(player.getColPos()+1);
+					maze[player.getRowPos()][player.getColPos()].setHasPlayer(true);
+					maze[player.getRowPos()][player.getColPos()].setRevealed(true);
 					//checks if the player finished the maze
 					if(checkWin() == true)
 					{
@@ -244,7 +244,7 @@ public class Main {
 				{
 					System.out.println("There is a wall, cannot move right. Please pick another position.");
 					//reveals the wall
-					maze[player.rPos][player.cPos+1].setRevealed(true);
+					maze[player.getRowPos()][player.getColPos()+1].setRevealed(true);
 					//next move
 					movePlayer();
 				}
